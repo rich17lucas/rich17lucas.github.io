@@ -12,6 +12,31 @@ Install using SNAP - _don't forget the --classic_
 
 [Ubuntu Quick Start](https://ubuntu.com/tutorials/install-a-local-kubernetes-with-microk8s#1-overview)
 
+#### Generating a Token for the K8s Dashboard
+Created a shell script `~\gentoken`:
+```
+# Generate a MicroK8 access token
+token=$(microk8s.kubectl -n kube-system get secret | grep default-token | cut -d " " -f1)
+microk8s.kubectl -n kube-system describe secret $token
+```
+```
+./gentoken
+name:         default-token-b4m6z
+Namespace:    kube-system
+Labels:       <none>
+Annotations:  kubernetes.io/service-account.name: default
+              kubernetes.io/service-account.uid: 9602f557-8203-45bc-a5c1-049b57969d0b
+
+Type:  kubernetes.io/service-account-token
+
+Data
+====
+namespace:  11 bytes
+token:      eyJhbGciOiJSUzI1NiIsImtpZCI6Imdoa0JlanZqYTVPZ25GTnRIZ2lmVFZTeFdXMHo4Sk55akVydF9WLTcxTE0ifQ.................................eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW
+ca.crt:     1103 bytes
+```
+Then past the certificate into the dashboard where it asks for a token on the login screen
+
 ## Helm - Kubernetes automation
 
 [Helm Snapcraft](https://snapcraft.io/helm)
@@ -43,9 +68,9 @@ export KUBECONFIG=/etc/microk8s/microk8s.conf
 
 
 
-### ToDo
-[Deploy Wordpress](https://webcloudpower.com/use-kubernetics-locally-with-microk8s/)
+### ToDo 
+[Deploy Wordpress Tutorial](https://webcloudpower.com/use-kubernetics-locally-with-microk8s/)
 
-[Deploy Jira and Postgress](https://github.com/stevehipwell/helm-charts/tree/master/charts/jira-software)
+[Helmchart for how to deploying Jira and Postgress containers](https://github.com/stevehipwell/helm-charts/tree/master/charts/jira-software)
 
 ## Jekyll - Website authoring
