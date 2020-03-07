@@ -17,7 +17,7 @@ Follow the steps in the [ACI Quickstart](https://docs.microsoft.com/en-us/azure/
 
 If you follow the instructions correctly, you'll end up with a simple container running a website that displays an image:
 
-![Azure Image](_site\assets\images\view-an-application-running-in-an-azure-container-instance.png)
+![Azure Image](/assets\images\view-an-application-running-in-an-azure-container-instance.png)
 
 For bonus points, do all three Quickstarts and learn how to create resource groups using the Portal (point and click), CLI, or Powershell*
 
