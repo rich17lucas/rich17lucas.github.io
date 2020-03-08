@@ -11,6 +11,13 @@ If you rather have the Azure CLI installed on your desktop instead of using the 
 
 [Azure CLI download](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest)
 
+##### Key AZ CLI Commands from the Quickstart tutorial 
+| Command | Notes |
+|---------|-------|
+| `az login` | Logs the cli into your AZ account. It will launch a browser window where you will log in. If you have set your account to use an authenticator app such as the [Microsoft Authenticator App](https://www.microsoft.com/en-gb/p/microsoft-authenticator/9nblgggzmcj6?activetab=pivot:overviewtab) then you'll be asked to approve. Once you've done that, the CLI will log into your chosen Azure subscription |
+|`az group create --name myResourceGroup --location uksouth`| Creates a new resource group in your subscription |
+|`az container create --resource-group myResourceGroup --name mycontainer --image mcr.microsoft.com/azuredocs/aci-helloworld --dns-name-label aci-demo --ports 80` | Deploys the _aci-helloworld_ image as a container. |
+| `az container show --resource-group myResourceGroup --name mycontainer --query "{FQDN:ipAddress.fqdn,ProvisioningState:provisioningState}" --out table` | When you run the command, the container's fully qualified domain name (FQDN) and its provisioning state are displayed. _Read the [ACI Quickstart](https://docs.microsoft.com/en-us/azure/container-instances/container-instances-quickstart) for more information about how this works_ |
 
 ### 30 Minute AZ Quickstart
 Follow the steps in the [ACI Quickstart](https://docs.microsoft.com/en-us/azure/container-instances/container-instances-quickstart)  As you've just installed the AZ CLI, use it as an exercise to get started with the Azure Command Line Interface (CLI). It will be where you spend more of your time as you continue to develop your Azure skills.
