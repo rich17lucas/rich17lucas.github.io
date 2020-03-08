@@ -14,7 +14,7 @@ If you rather have the Azure CLI installed on your desktop instead of using the 
 
 ##### Key AZ CLI Commands from the Quickstart tutorial 
 | Command | Notes |
-| --- | --- |
+|---|---|
 | `az login` | Logs the cli into your AZ account. It will launch a browser window where you will log in. If you have set your account to use an authenticator app such as the [Microsoft Authenticator App](https://www.microsoft.com/en-gb/p/microsoft-authenticator/9nblgggzmcj6?activetab=pivot:overviewtab) then you'll be asked to approve. Once you've done that, the CLI will log into your chosen Azure subscription |
 |`az group create --name myResourceGroup --location uksouth`| Creates a new resource group in your subscription |
 |`az container create --resource-group myResourceGroup --name mycontainer --image mcr.microsoft.com/azuredocs/aci-helloworld --dns-name-label aci-demo --ports 80` | Deploys the _aci-helloworld_ image as a container. |
