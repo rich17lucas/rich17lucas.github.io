@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "What I Learnt Today - DataBricks SSQL Querying Files"
-date:   2020-03-07 09:00:00 +0000
+date:   2020-03-11 09:00:00 +0000
 categories: updates databricks
 ---
 ## DataBricks
