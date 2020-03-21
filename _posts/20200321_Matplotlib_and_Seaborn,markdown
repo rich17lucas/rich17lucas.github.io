@@ -1,0 +1,16 @@
+---
+layout: post
+title:  "2 Lines of Code to Transform Matplotlib Charts"
+date:   2020-03-21 08:30:00
+categories: update python charting matplotlib seaborn
+---
+Simply adding 2 lines of code to your notebook will change basic MatplotLib Charts from this:
+
+
+to this:
+
+
+{% highlight ruby %}
+import seaborn as sns
+sns.set()
+{% endhighlight %}
