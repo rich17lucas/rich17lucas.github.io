@@ -14,7 +14,7 @@ to this:
 
 And that's done by adding these 2 lines:
 
-{% highlight ruby %}
+```
 import seaborn as sns
 sns.set()
-{% endhighlight %}
+```
